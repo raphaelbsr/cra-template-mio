@@ -17,8 +17,8 @@ const Login = props => {
       <Bottom>
         <LoginContent>
           <Autenticacao
-            antesDeEntrar={() => {}}
-            depoisDeEntrar={status => {
+            beforeSubmit={() => {}}
+            afterSubmit={status => {
               if (status.status) {
                 props.history.push("/home");
               }
