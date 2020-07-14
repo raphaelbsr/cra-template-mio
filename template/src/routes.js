@@ -1,21 +1,22 @@
-import React from "react";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import React from 'react';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Layout from "./pages/Layout";
-import { isAuthenticated } from "mio-library-autenticacao";
+import Login from './pages/Login';
+import Home from './pages/Home';
+import Examples from './pages/Examples';
+import Layout from './pages/Layout';
+import { isAuthenticated } from 'mio-library-autenticacao';
 
 const PrivateRoute = ({ component: Component, title, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
+    render={(props) =>
       isAuthenticated() ? (
         <Layout title={title}>
           <Component {...props} />
         </Layout>
       ) : (
-        <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
       )
     }
   />
@@ -29,6 +30,7 @@ const Routes = () => (
       <Route path="/esqueci-senha" component={() => <h1>Esqueci Senha</h1>} />
 
       <PrivateRoute path="/home" title="Home" component={Home} />
+      <PrivateRoute path="/examples" title="Home" component={Examples} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
   </HashRouter>

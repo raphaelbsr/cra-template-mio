@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 // import { Autenticacao } from "~/components/index";
-import { Container, Top, Bottom, LogoContent, LoginContent } from "./styles";
-import Logo from "~/assets/images/Logo.png";
-import Logo2x from "~/assets/images/Logo@2x.png";
+import { Container, Top, Bottom, LogoContent, LoginContent } from './styles';
+import Logo from '~/assets/images/Logo.png';
+import Logo2x from '~/assets/images/Logo@2x.png';
 
-import { Autenticacao } from "mio-library-autenticacao";
+import { Autenticacao } from 'mio-library-autenticacao';
 
-const Login = props => {
+const Login = (props) => {
   return (
     <Container>
       <Top>
@@ -18,9 +18,9 @@ const Login = props => {
         <LoginContent>
           <Autenticacao
             beforeSubmit={() => {}}
-            afterSubmit={status => {
+            afterSubmit={(status) => {
               if (status.status) {
-                props.history.push("/home");
+                props.history.push('/home');
               }
             }}
           />

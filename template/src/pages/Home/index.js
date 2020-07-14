@@ -1,7 +1,7 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from '@material-ui/core';
 
-const Home = () => <div>Página Home</div>;
+const Home = () => <Container>Página Home</Container>;
 
 export default Home;

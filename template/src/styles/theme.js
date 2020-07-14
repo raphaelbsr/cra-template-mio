@@ -9,12 +9,12 @@ const theme = createMuiTheme({
       light: 'rgba(81, 92, 128, 1)',
       main: 'rgba(38, 51, 83, 1)',
       dark: 'rgba(0, 12, 42, 1)',
-      contrastText: 'rgba(185, 255, 90, 1)',
+      contrastText: '#00d7f6',
     },
     secondary: {
-      light: 'rgba(238, 255, 141, 1)',
-      main: 'rgba(185, 255, 90, 1)',
-      dark: 'rgba(133, 203, 33, 1)',
+      light: '#6bffff',
+      main: '#00d7f6',
+      dark: '#00a5c3',
       contrastText: 'rgba(38, 51, 83, 1)',
     },
     error: {
